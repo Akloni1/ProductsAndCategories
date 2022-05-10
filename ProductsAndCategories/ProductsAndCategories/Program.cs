@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Data.SqlClient;
-
-String connectionString = "Server=DESKTOP-JUI9V07;Database=ProductsAndCategories;Trusted_connection=True";
+Console.WriteLine("Введите имя сервера:");
+string server = Console.ReadLine();
+String connectionString = $"Server={server};Database=ProductsAndCategories;Trusted_connection=True";
 SqlConnection connection = new SqlConnection(connectionString);
 connection.Open();
 using (connection)
